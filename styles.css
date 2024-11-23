@@ -368,6 +368,77 @@ button, a {
 html {
   scroll-behavior: smooth;
 }
+/* Media query for small screens like iPhone */
+@media only screen and (max-width: 768px) {
+  body {
+      font-size: 14px;  /* Adjust the base font size */
+  }
+
+  /* You can also target specific text elements */
+  h1, h2, h3, p {
+      font-size: smaller;  /* Adjust sizes for headings and paragraphs */
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* Hide text on mobile */
+  .gallery-text, .portfolio-text, .book-now-text {
+      display: none;
+  }
+  
+  /* Show name only on mobile */
+  .name-only {
+      display: block;  /* Show the name or logo only */
+  }
+}
+/* Style the hamburger menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 4px;
+  margin: 5px;
+  background-color: #333;
+}
+
+/* Media query to show the hamburger menu on mobile */
+@media only screen and (max-width: 768px) {
+  .hamburger {
+      display: block;  /* Show hamburger menu on mobile */
+      position: absolute;
+      top: 20px;
+      right: 20px;
+  }
+
+  .menu {
+      display: none;  /* Hide menu by default */
+      position: absolute;
+      top: 50px;
+      right: 10px;
+      background-color: #fff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu.active {
+      display: block;  /* Show menu when activated */
+  }
+
+  .menu a {
+      padding: 10px 20px;
+      display: block;
+      text-decoration: none;
+      color: #333;
+  }
+
+  .menu a:hover {
+      background-color: #f1f1f1;
+  }
+}
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
 
   
   

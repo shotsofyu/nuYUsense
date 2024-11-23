@@ -30,5 +30,28 @@
     <footer>
         <p>Connect with me on Instagram: <a href="https://www.instagram.com/shots_of_yu/">@shots_of_yu</a></p>
     </footer>
+    <!-- Hamburger Menu Icon -->
+<div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<!-- Menu -->
+<div class="menu">
+    <a href="#gallery">Gallery</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#book-now">Book Now</a>
+</div>
+<!-- Your other HTML content -->
+
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('active');  // Toggle the visibility of the menu
+    }
+    </script>
+    </body>
+    
 </body>
 </html>
