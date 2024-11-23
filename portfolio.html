@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - nuYUsense</title>
     <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <!-- Header with navigation -->
     <header>
-        <h1>Portfolio</h1>
-        <nav>
+        <div class="name-only">
+            <h1>nuYUsense</h1> <!-- Show name only on mobile -->
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
@@ -19,39 +23,39 @@
                 <li><a href="book-now.html">Book Now</a></li>
             </ul>
         </nav>
+
+        <!-- Hamburger Menu for Mobile -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </header>
 
+    <!-- Mobile Menu (hidden by default) -->
+    <div class="menu">
+        <a href="gallery.html">Gallery</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="book-now.html">Book Now</a>
+    </div>
+
+    <!-- Main Content Section -->
     <section>
         <h2>My Work</h2>
         <p>Showcase of my aesthetic visuals and projects.</p>
         <!-- Add portfolio content here -->
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>Connect with me on Instagram: <a href="https://www.instagram.com/shots_of_yu/">@shots_of_yu</a></p>
     </footer>
-    <!-- Hamburger Menu Icon -->
-<div class="hamburger" onclick="toggleMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
-</div>
 
-<!-- Menu -->
-<div class="menu">
-    <a href="#gallery">Gallery</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#book-now">Book Now</a>
-</div>
-<!-- Your other HTML content -->
-
-<script>
-    function toggleMenu() {
-        const menu = document.querySelector('.menu');
-        menu.classList.toggle('active');  // Toggle the visibility of the menu
-    }
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');  // Toggle the visibility of the menu
+        }
     </script>
-    </body>
-    
 </body>
 </html>
