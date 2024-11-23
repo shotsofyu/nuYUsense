@@ -294,6 +294,80 @@ footer {
     background-color: #333;
     color: white;
 }
+/* Default Styles for Larger Screens (e.g., tablets or desktop) */
+body {
+  font-size: 16px;
+}
+
+/* For Screens Smaller Than 768px (like iPhones) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;  /* Smaller font size for mobile devices */
+  }
+
+  .container {
+    padding: 15px;  /* Adjust padding for smaller screens */
+  }
+
+  .header {
+    text-align: center;  /* Center-align text in header */
+  }
+}
+
+/* For Extra Small Screens (e.g., iPhones in portrait mode) */
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;  /* Further reduce padding on small screens */
+  }
+
+  h1 {
+    font-size: 24px;  /* Adjust heading size */
+  }
+
+  .menu {
+    font-size: 12px;  /* Smaller font for navigation menu */
+  }
+}
+/* Sticky header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);  /* Semi-transparent background */
+  z-index: 100;
+  padding: 10px;
+}
+
+/* Make sure the content below is not hidden behind the header */
+body {
+  padding-top: 60px;  /* Adjust this based on your header size */
+}
+button, a {
+  padding: 10px 20px;  /* Add padding to buttons and links */
+  font-size: 16px;  /* Ensure text is legible */
+  display: inline-block;  /* Prevent any layout issues */
+}
+/* Use Flexbox for a fluid layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item {
+  flex: 1 1 30%;  /* Each item takes up 30% of the container's width */
+  margin: 10px;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .item {
+    flex: 1 1 100%;  /* Stack items vertically on small screens */
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
 
   
   
