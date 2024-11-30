@@ -1,46 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nuYUsense Portfolio</title>
+    <title>nuYUsense</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+      
+    <!-- Navigation Bar -->
     <header>
-        <h1>Welcome to nuYUsense</h1>
-        <p>Aesthetic videos and visuals by @shots_of_yu</p>
+        <div class="logo">
+            <img src="assets/logo.png" alt="nuYUsense Logo">
+        </div>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="description.html">Description</a></li>
-                <li><a href="book-now.html">Book Now</a></li>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#book-now">Book Now</a></li>
             </ul>
         </nav>
+        <a href="#contact" class="contact-btn">Contact Us</a>
     </header>
-    
-    <section class="hero">
-        <video autoplay muted loop class="background-video">
-          <source src="assets/hero-video.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <div class="hero-content">
-          <h1>Crafting Moments, Creating Memories</h1>
-          <p>Welcome to nuYUsense – Where Creativity Meets Aesthetics.</p>
-          <button onclick="location.href='gallery.html'">Explore Gallery</button>
+
+    <!-- hero section -->
+    <section id="hero">
+      <div class="hero-content">
+        <h1>T H E - N E W S E N S E</h1>
+        <p>Capturing Moments, Creating Legacy</p>
+      </div>
+    </section>
+
+    <!-- Description Section -->
+    <section id="description">
+      <div class="description-container">
+        <h2>About Us</h2>
+        <p>
+          At <strong>The Newsense</strong>, we bring life to every moment we capture, transforming them into unforgettable stories. 
+          From collaborating with event planners to creating stunning Instagram reels, we specialize in turning visions into reality.
+        </p>
+        <p>
+          Whether it’s capturing the essence of a grand wedding, showcasing the elegance of event decor, or crafting engaging brand content, 
+          we strive for excellence in every detail. Our work reflects creativity, passion, and precision, ensuring your memories and moments 
+          are preserved beautifully.
+        </p>
+        <p>
+          With years of expertise and a commitment to quality, we stand out as your trusted partner in creating visually stunning and impactful 
+          content. Let us help you elevate your story, one frame at a time.
+        </p>
+      </div>
+    </section>    
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="gallery-container">
+          <h2 class="gallery-title">Our Work with Clients</h2>
+          <div class="gallery">
+            <div class="gallery-item">
+              <img src="assets/image4.JPG" alt="Image 1">
+              <div class="overlay">Portfolio Item 1</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/image8.PNG" alt="Image 2">
+              <div class="overlay">Portfolio Item 2</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/image6.PNG" alt="Image 3">
+              <div class="overlay">Portfolio Item 3</div>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/image7.PNG" alt="Image 4">
+              <div class="overlay">Portfolio Item 4</div>
+            </div>
+          </div>
         </div>
       </section>      
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm an Instagram creator focusing on aesthetic visuals of objects and views, synchronized to music beats.</p>
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2 class="portfolio-title">Our Portfolio</h2>
+        <section id="portfolio-carousel" class="carousel">
+            <div class="portfolio">
+                <div class="portfolio-container">
+                  <button class="arrow left-arrow">&lt;</button>
+                  <div class="portfolio-items">
+                    <div class="portfolio-item">
+                        <img src="assets/logo1.png" alt="Client 1 Logo" />
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="assets/logo2.jpg" alt="Client 2 Logo" />
+                      </div>
+                      <div class="portfolio-item">
+                        <img src="assets/logo3.png" alt="Client 3 Logo" />
+                      </div>
+                      <div class="portfolio-item">
+                        <img src="assets/logo4.jpg" alt="Client 4 Logo" />
+                      </div>
+                      <div class="portfolio-item">
+                        <img src="assets/logo5.png" alt="Client 5 Logo" />
+                        </div>
+                        <div class="portfolio-item">
+                          <img src="assets/logo6.jpg" alt="Client 6 Logo" />
+                          </div>
+                        <!-- Add more logos as needed -->
+                  </div>
+                  <button class="arrow right-arrow">&gt;</button>
+                </div>
+              </div>
+                  <!-- Portfolio Description Section -->
+<div class="portfolio-description">
+    <h2 class="description-title">Our Approach to Building Lasting Legacies</h2>
+    <p class="description-text">
+      At The Newsense, we are driven by a passion for creating high-quality, innovative work that leaves a lasting impact. We collaborate closely with our clients to understand their vision and deliver exceptional results that exceed expectations. Our commitment to excellence has built a legacy of trust, with every project adding to our reputation for creativity, precision, and dedication.
+    </p>
+  </div>            
+    </div>
+</section>      
+
+    <!-- Book Now Section -->
+    <section id="book-now">
+        <h2>Book Now</h2>
+        <p>Ready to book your next event shoot with us? Contact us today to schedule a session.</p>
+        <a href="#contact" class="cta-btn">Book Now</a>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>Connect with me on Instagram: <a href="https://www.instagram.com/shots_of_yu/">@shots_of_yu</a></p>
-    </footer>
+        <p>&copy; 2024 The newsense. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><img src="assets/facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="assets/instagram-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="assets/twitter-icon.png" alt="Twitter"></a>
+        </div>
+    </footer> 
+       <!-- Smooth Scroll JavaScript -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
+
+
 
