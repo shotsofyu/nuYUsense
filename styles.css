@@ -1,4 +1,4 @@
-/* General Styles */
+/* General Styles */   
 body {
   font-family: 'Poppins', sans-serif;
 }
@@ -49,23 +49,63 @@ header {
   border-radius: 5px;
   cursor: pointer;
 }
+.heading-mobile {
+  display: none;
+}
+
+/* Default styles for the navigation (Desktop View) */
+.nav-menu {
+  display: flex; /* Keep the menu horizontal on desktops */
+}
+
+.hamburger {
+  display: none; /* Hide hamburger menu on desktop */
+}
+.nav-menu-mobile {
+  display: none;
+}
+.nav-links-mobile {
+  display: none;
+}
 
 /* Hero Section */
 #hero {
   position: relative;
   width: 100%;
-  height: 80vh; /* Adjust height as needed */
-  background-image: url('assets/hero-image.png'); /* Replace with your image path */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
+  height: 100vh; /* Full viewport height */
   overflow: hidden;
 }
+
+#hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire area */
+  z-index: -1; /* Puts the video behind the content */
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1; /* Ensures the content is above the video */
+  font-family: 'Arial', sans-serif;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
 
 /* Faded Background Effect */
 #hero::before {
@@ -75,7 +115,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  background-color: none; /* Black overlay with 50% opacity */
   z-index: 1;
 }
 
@@ -224,7 +264,7 @@ header {
 #book-now {
   padding: 50px;
   text-align: center;
-  background: linear-gradient(to right, #ff7e5f, #feb47b); /* A gradient for your theme */
+  background: linear-gradient(to right, #ffffff, #bab5b5); /* A gradient for your theme */
   color: white;
 }
 
@@ -418,7 +458,7 @@ section {
 
 /* Reduce the size of the portfolio logos */
 .portfolio-container img {
-  width: 150px; /* Adjust the width */
+  width: 130px; /* Adjust the width */
   height: auto; /* Maintain aspect ratio */
   transition: transform 0.3s ease; /* Smooth scaling transition on hover */
 }
@@ -484,6 +524,443 @@ section {
   line-height: 1.8;
   margin-bottom: 20px;
 }
+/* Media Queries for Mobile Screens */
+@media (max-width: 768px) {
+  /* Body */
+  body {
+    font-size: 14px;
+  }
+
+  /* Header and Navigation Bar */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .heading-mobile {
+    display: flex;
+    font-size: 12px;
+    }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 10px;
+    text-align: left;
+  }
+  .contact-btn {
+    display: none;
+  }
+
+  /* Hero Section */
+  #hero {
+    height: 50vh; /* Adjust height for smaller screens */
+    background-size: cover;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  /* Gallery */
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .gallery-item {
+    border-radius: 20px;
+  }
+
+  .gallery-item img {
+    height: 200px; /* Set height to make images consistent */
+  }
+
+   /* Portfolio Section */
+  .portfolio-container {
+    flex-wrap: wrap; /* Stack items on small screens */
+    justify-content: center;
+  }
+
+  .portfolio-item {
+    width: 30%; /* Two items per row */
+    margin-bottom: 10px;
+  }
+
+  .portfolio-item img {
+    width: 20%; /* Adjust image size */
+  }
+
+  .portfolio-description {
+    padding: 10px;
+  }
+
+  /* Book Now Section */
+  #book-now h2 {
+    font-size: 2rem;
+  }
+
+  #book-now p {
+    font-size: 1rem;
+  }
+
+  .cta-btn {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.8rem;
+  }
+
+  /* Carousel */
+  .carousel {
+    width: 95%; /* Adjust width for mobile */
+  }
+
+  .carousel-inner {
+    flex-wrap: nowrap; /* Allow sliding */
+    gap: 10px;
+  }
+
+  .carousel-item {
+    min-width: 100%; /* Show one card per view */
+  }
+
+  /* Description Section */
+  #description h2 {
+    font-size: 2rem;
+  }
+
+  #description p {
+    font-size: 1rem;
+  }
+}
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 20px; /* Adjusted for proper alignment */
+    left: 20px; /* Adjusted for proper alignment */
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above other elements */
+  }
+
+  .nav-menu {
+    display: none; /* Hide the menu by default */
+    flex-direction: column; /* Stack items vertically when shown */
+    background-color: #663635; /* Same background as header */
+    position: absolute;
+    width: 180px;
+    top: 60px; /* Adjusted to prevent overlapping */
+    left: 0;
+    z-index: 1000;
+    padding: 20px 10px; /* Added padding for better spacing */
+  }
+
+  .nav-menu.active {
+    display: flex; /* Show menu when active */
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column; /* Vertical links */
+    gap: 15px; /* Spacing between menu items */
+    width: 100%; /* Ensure links take full width */
+    margin: 0; /* Reset any margin */
+    padding: 0;
+    align-items: flex-start; /* Align links to the left */
+  }
+
+  .nav-links a {
+    font-size: 16px; /* Standardized font size */
+    padding: 10px 20px; /* Consistent padding */
+    text-align: left; /* Align text to the left */
+    color: white;
+    width: 100%; /* Full width */
+    border-bottom: 1px solid #e1999f; /* Divider between items */
+    text-transform: uppercase; /* Ensure uniform text style */
+    font-weight: 500;
+  }
+
+  .nav-links a:hover {
+    background-color: #f56a00; /* Highlight on hover */
+  }
+
+  .heading-mobile {
+    display: flex;
+    justify-content: center; /* Center align the heading */
+    align-items: center;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px; /* Add spacing around the heading */
+    width: 100%; /* Ensure it spans full width */
+    color: white;
+  }
+}
+
+
+
+/* Hidden form container */
+.hidden {
+  display: none;
+}
+
+#booking-form-container {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+#booking-form h3 {
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#booking-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#booking-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  background-color: #7d4c3a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.submit-btn:hover {
+  background-color: #5c3729;
+}
+
+/*testimonial*/
+
+#testimonials {
+  background-color: #faf8f9;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#testimonials h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #663635;
+}
+
+.testimonial-carousel {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-item {
+  display: none;
+  animation: fade 1s;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.carousel-item p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.carousel-item h4 {
+  font-size: 1.2rem;
+  color: #663635;
+}
+
+/* Carousel Navigation */
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.carousel-nav button {
+  width: 10px;
+  height: 10px;
+  background-color: #e1999f;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.carousel-nav button.active {
+  opacity: 1;
+}
+
+/* Fade Animation */
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#team {
+  background-color: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+}
+
+#team h2 {
+  font-size: 2rem;
+  color: #663635;
+  margin-bottom: 20px;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+}
+
+.team-member h4 {
+  font-size: 1.2rem;
+  color: #663635;
+}
+
+.team-member a {
+  text-decoration: none;
+  color: #f56a00;
+}
+
+.team-member a:hover {
+  text-decoration: underline;
+}
+
+#reels {
+  background-color: #f8f7f9;
+  padding: 30px 20px;
+  text-align: center;
+  color: white;
+}
+
+#reels h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#reels p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+#reels .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f56a00;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+#reels .btn:hover {
+  background-color: #e1999f;
+}
+
+#join-us {
+  background-color: #f9f9f9;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+#join-us h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #663635;
+}
+
+#join-us-btn {
+  padding: 10px 20px;
+  background-color: #f56a00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#join-us-btn:hover {
+  background-color: #e1999f;
+}
+
+#join-us-form {
+  margin-top: 20px;
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#join-us-form label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+#join-us-form input, #join-us-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
 
 
 

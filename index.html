@@ -10,31 +10,52 @@
 </head>
 
 <body>
-      
-    <!-- Navigation Bar -->
-    <header>
-        <div class="logo">
-            <img src="assets/logo.png" alt="nuYUsense Logo">
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#book-now">Book Now</a></li>
-            </ul>
-        </nav>
-        <a href="#contact" class="contact-btn">Contact Us</a>
-    </header>
+  <!-- Navigation Bar -->
+  <header>
 
+    <header>
+<div class="logo">
+  <img src="assets/logo.png" alt="Logo">
+</div>
+      <nav class="nav-menu">
+      <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#book-now">Book Now</a></li>
+      </ul>
+      </nav>
+      </header>
+      <div class="heading-mobile"><h1>THE NEWSENSE</h1></div>
+  </header>
+      <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+      </header>
+      <nav class="nav-menu-mobile">
+       <ul class="nav-links-mobile">
+       <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#book-now">Book Now</a></li>
+      </ul>
+      </nav>
+      </header>
+      <a href="#contact" class="contact-btn">Contact Us</a>
+      </header>
+      
+    
     <!-- hero section -->
     <section id="hero">
+      <video autoplay muted loop id="hero-video">
+        <source src="assets/Untitled design.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <div class="hero-content">
         <h1>T H E - N E W S E N S E</h1>
         <p>Capturing Moments, Creating Legacy</p>
       </div>
-    </section>
+    </section>    
 
     <!-- Description Section -->
     <section id="description">
@@ -79,6 +100,13 @@
             </div>
           </div>
         </div>
+        <section id="reels">
+          <h2>Explore Our Work</h2>
+          <p>
+            Click the button below to explore our projects and reels. See how we capture moments that last forever.
+          </p>
+          <a href="https://drive.google.com/drive/folders/1HdxU1pVAT_9qG_afTu2JPhFiK21tL46x?usp=drive_link" target="_blank" class="btn">View Our Work</a>
+        </section>        
       </section>      
 
     <!-- Portfolio Section -->
@@ -120,14 +148,92 @@
     </p>
   </div>            
     </div>
-</section>      
+</section>
 
-    <!-- Book Now Section -->
-    <section id="book-now">
-        <h2>Book Now</h2>
-        <p>Ready to book your next event shoot with us? Contact us today to schedule a session.</p>
-        <a href="#contact" class="cta-btn">Book Now</a>
-    </section>
+<!--testimonial-->
+<section id="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial-carousel">
+    <div class="carousel-item">
+      <p>"The Newsense team did an incredible job capturing our event. The attention to detail was beyond amazing!"</p>
+      <h4>- John Doe</h4>
+    </div>
+    <div class="carousel-item">
+      <p>"Absolutely loved working with The Newsense. Their creativity and professionalism are unmatched."</p>
+      <h4>- Sarah Smith</h4>
+    </div>
+    <div class="carousel-item">
+      <p>"I highly recommend The Newsense. They turned our vision into a stunning reality. Thank you!"</p>
+      <h4>- Michael Brown</h4>
+    </div>
+  </div>
+</section>
+
+
+   <!-- Book Now Section -->
+<section id="book-now">
+  <h2>Book Now</h2>
+  <p>Ready to book your next event shoot with us? Contact us today to schedule a session.</p>
+  <button id="book-now-btn" class="cta-btn">Book Now</button>
+
+  <!-- Hidden Form -->
+  <div id="booking-form-container" class="hidden">
+      <form id="booking-form" action="#" method="POST">
+          <h3>Booking Form</h3>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+          <label for="whatsapp">WhatsApp Number:</label>
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="Enter your WhatsApp number" required>
+
+          <button type="submit" class="submit-btn">Submit</button>
+      </form>
+  </div>
+</section>
+
+<!--info team-->
+<section id="team">
+  <h2>Meet Our Team</h2>
+  <div class="team-container">
+    <div class="team-member">
+      <h4>Yuvraj Singh</h4>
+      <p>Creative Head</p>
+      <a href="https://instagram.com/your_instagram" target="_blank">Instagram</a> |
+      <a href="https://linkedin.com/in/your_linkedin" target="_blank">LinkedIn</a>
+    </div>
+    <div class="team-member">
+      <h4>Harsh Dubey</h4>
+      <p>Photographer</p>
+      <a href="https://instagram.com/another_instagram" target="_blank">Instagram</a> |
+      <a href="https://linkedin.com/in/another_linkedin" target="_blank">LinkedIn</a>
+    </div>
+    <div class="team-member">
+      <h4>Zonu Mavai</h4>
+      <p>Videographer</p>
+      <a href="https://instagram.com/jane_instagram" target="_blank">Instagram</a> |
+      <a href="https://linkedin.com/in/jane_linkedin" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</section> 
+<section id="join-us">
+  <h2>Join Our Team</h2>
+  <button id="join-us-btn">Apply Now</button>
+  <form id="join-us-form" style="display: none;">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="role">What Role Are You Applying For?</label>
+    <input type="text" id="role" name="role" required>
+    
+    <label for="message">Tell Us About Yourself:</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+    
+    <button type="submit">Submit</button>
+  </form>
+</section>        
 
     <!-- Footer -->
     <footer>
@@ -138,6 +244,7 @@
             <a href="#"><img src="assets/twitter-icon.png" alt="Twitter"></a>
         </div>
     </footer> 
+    <script src="script.js"></script>
        <!-- Smooth Scroll JavaScript -->
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -149,7 +256,12 @@
             });
         });
     </script>
-    <script src="script.js"></script>
+    <script>
+      document.querySelector('.hamburger').addEventListener('click', function () {
+        const navMenu = document.querySelector('.nav-menu');
+        navMenu.classList.toggle('active');
+      });
+    </script>
 </body>
 </html>
 
